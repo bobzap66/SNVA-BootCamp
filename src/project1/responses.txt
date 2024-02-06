@@ -1,0 +1,11 @@
+hi: Hello there! Welcome to ChatBotNG! I'll help you decide what to eat for dinner! Type 'exit' to exit!
+hello: Heya!
+hungry: What would you like to eat? Do you want to pick between a style of food (Italian, Mexican) or a type of cooking (Crock Pot, Skillet)?
+know: Do you want to pick between a style of food (Italian, Chinese) or a type of cooking (Crock Pot, Skillet)?
+style: Do you prefer BBQ, Asian, Mexican, Italian, Country, or Meat and Sides?
+type: Do you want a crock pot meal, a skillet meal, something handheld(sandwich, hot dogs, etc), or something more like bbq(pork loin, ribs, etc)?
+back: I'll take you back to the beginning. Hello there! Welcome to ChatBotNG! I'll help you decide what to eat for dinner! Type 'exit' to exit! What would you like to eat? Do you want to pick between a style of food (Italian, Mexican) or a type of cooking (Crock Pot Meals, BBQ)?
+unknown: Unfortunately, I don't have any of those recipes right now.
+help: I'm looking for keywords to suggest what meal you should have for dinner. I'll take you back to the beginning. Do you want to pick between a style of food (Italian, Chinese) or a type of cooking (Crock Pot Meals, Grilling)?
+default: I don't understand what you're asking. Type "help" for more info.
+exit: Goodbye!

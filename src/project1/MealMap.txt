@@ -1,0 +1,50 @@
+mexican:chimichangas
+mexican:tacos
+mexican:chili cheese burritos
+mexican:fajitas
+mexican:quesadillas
+mexican:taco salad
+mexican:fish tacos
+italian:spaghetti
+italian:lazy lasagna
+italian:chicken parmesean
+italian:lasagna
+italian:goulash
+italian:pizza
+country:biscuits and gravy
+country:pinto beans
+country:fried chicken
+country:fish
+country:meatloaf
+meat:pork chops, baked apples, and baked beans
+meat:steak, broccoli, and mashed potatoes
+meat:grilled chicken, creamed corn, and green beans
+bbq:pork butt
+bbq:beef brisket
+bbq:ribs
+bbq:smoked chicken wings
+bbq:pork loin
+bbq:beer chicken
+crock:roast
+crock:beef stew
+crock:chili
+crock:tomato soup
+crock:chicken and dumplings
+crock:chicken noodle
+skillet:beef stroganoff
+skillet:sloppy joes
+skillet:mushroom chicken
+skillet:brautwurst and potatoes
+skillet:skillet pork chops with apples and onion
+handheld:hamburgers
+handheld:hot dogs
+handheld:big plate of little sandwiches
+handheld:meatball subs
+handheld:hoagies
+handheld:italian sandwich sub
+handheld:french dip
+asian:teriyaki chicken
+asian:brocoli chicken
+asian:sweet and sour
+asian:general tsou
+asian:eggrolls (buffalo chicken, cheeseburger, etc)
