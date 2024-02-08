@@ -33,15 +33,25 @@ public class Library {
 		
 	}
 	
-	public void displayBooksDetails() {
+	public static void displayAvailableBooks() {
+		System.out.println("Available Library Books");
+		for(Map.Entry<String, Book> book : Library.books.entrySet()) {
+			if(book.getValue().getStatus().equals("Available")) {
+				System.out.println(book.toString());
+				System.out.println();
+			}
+		}
+		System.out.println();
+		
+	}
+	
+	public static void displayBooksDetails() {
 		System.out.println("Library Books");
 		books.forEach((id,book) -> System.out.println("\n"+book.toStringDetails())); 
 			System.out.println();
-
-
-		
 	}	
-	public User getUser(String ID) {
+	
+	public static User getUser(String ID) {
 		
 		return Library.users.get(ID);
 		
@@ -52,7 +62,7 @@ public class Library {
 		
 	}
 	
-	public void displayUsers() {
+	public static void displayUsers() {
 		System.out.println("Library Users");
 		for(Map.Entry<String, User> user : Library.users.entrySet()) {
 			System.out.println(user.toString());
@@ -61,7 +71,7 @@ public class Library {
 		System.out.println();
 	}
 	
-	public void displayUserDetails() {
+	public static void displayUserDetails() {
 		System.out.println("Library Users");
 		users.forEach((id, user) -> System.out.println("\n"+user.displayUserDetails())); 
 

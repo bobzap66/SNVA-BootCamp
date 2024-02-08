@@ -2,9 +2,9 @@ package Day7_Feb_7_2024;
 
 import java.util.ArrayList;
 
-public class CheckOut extends Transaction {
+public class Checkout extends Transaction {
 
-	public CheckOut(User user, ArrayList<Book> books) {
+	public Checkout(User user, ArrayList<Book> books) {
 		super();
 		type="checkout";
 		this.user = user;

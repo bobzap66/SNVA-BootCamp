@@ -48,6 +48,15 @@ public class User {
 		user = user + "\n" + borrowed.toString();
 		return user;
 	}
+	
+	public String displayBorrowed() {
+		String rv = "User: " + id + " currently has checked out:";
+		rv = rv + "\n";
+		for(Book book : borrowed) {
+			rv = rv + book.toString();
+		}
+		return rv;
+	}
 
 
 	public String getId() {
