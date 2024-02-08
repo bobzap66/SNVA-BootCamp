@@ -1,4 +1,4 @@
-package Da5_Feb_5_2024;
+package Day5_Feb_5_2024;
 
 public class Box {
 	private double width;
