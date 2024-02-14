@@ -45,7 +45,7 @@ public class Book {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Book(String title, String authorFirstName, String authorLastName, String genre) {
+	public Book(String title, String authorLastName, String authorFirstName, String genre) {
 		super();
 		this.title = title;
 		this.authorFirstName = authorFirstName;
@@ -60,7 +60,7 @@ public class Book {
 	}
 	
 	public String toString() {
-		String display = title + " by " + authorFirstName + " " + authorLastName + "\nISBN: " + ISBN;
+		String display = title + " by " + authorFirstName + " " + authorLastName + "\nISBN: " + ISBN + "\n";
 		return display;
 	}
 	

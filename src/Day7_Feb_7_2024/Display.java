@@ -2,7 +2,7 @@ package Day7_Feb_7_2024;
 
 public class Display {
 	
-	int width = 40;
+	static int width = 80;
 	
 	public void printLine() {
 		for(int i = 0; i < width; i++) {
@@ -11,7 +11,7 @@ public class Display {
 		System.out.printf("\n");
 	}
 	
-	public String centerText(String text) {
+	public static String centerText(String text) {
 		int padding = ((width - text.length())/2)-1;
 		StringBuilder centeredText = new StringBuilder();
 		centeredText.append("|");

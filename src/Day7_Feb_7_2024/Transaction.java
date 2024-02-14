@@ -6,7 +6,7 @@ public abstract class Transaction {
 	protected String id;
 	protected String type;
 	static int nextId = 1;
-	protected User user;
+	protected String userId;
 	protected List<Book> books;
 	
 	public void setId() {

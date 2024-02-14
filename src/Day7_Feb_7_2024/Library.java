@@ -13,14 +13,20 @@ public class Library {
 	static HashMap<String,Book> books;
 	static HashMap<String, User> users;
 	static List<Transaction> transactions;
+	static HashMap<String, String> usersByUsername;
 	
 	public Library() {
 		super();
 		Library.books = new HashMap<String,Book>();
 		Library.users = new HashMap<String,User>();
 		Library.transactions = new ArrayList<Transaction>();
+		Library.usersByUsername = new HashMap<String,String>();
 		addBooks("./src/Day7_Feb_7_2024/books.csv");
 		addUsers("./src/Day7_Feb_7_2024/users.csv");
+		Library.users.get("ID111").setAdmin(true);
+		Library.users.get("ID111").isAdmin();
+		
+		
 	}
 	
 	public void displayBooks() {
@@ -57,7 +63,7 @@ public class Library {
 		
 	}
 	
-	public Book getBook(String ISBN) {
+	public static Book getBook(String ISBN) {
 		return Library.books.get(ISBN);
 		
 	}
@@ -84,6 +90,7 @@ public class Library {
 	
 	public static void addUser(User user) {
 		Library.users.put(user.getId(), user);
+		Library.usersByUsername.put(user.getUsername(),user.getId());
 	}
 	
 	
@@ -114,7 +121,7 @@ public class Library {
 	        try {
 				while ((line = reader.readLine()) != null) {
 				    String[] userInfo = line.split(",");
-				    user = new User(userInfo[0],userInfo[1],userInfo[2],userInfo[3],userInfo[4],userInfo[5],userInfo[6]);
+				    user = new User(userInfo[0],userInfo[1],userInfo[2],userInfo[3],userInfo[4],userInfo[5],userInfo[6],userInfo[7]);
 				    addUser(user);
 				}
 			} catch (IOException e) {
@@ -143,6 +150,11 @@ public class Library {
 			System.out.println(transaction.toString());
 			System.out.println();
 		}
+	}
+
+	public static void removeBook(String string) {
+		books.remove(string);
+		
 	}
 	
 

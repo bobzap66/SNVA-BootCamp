@@ -16,13 +16,17 @@ public class CheckoutMenu extends Display{
 			Library.displayAvailableBooks();
 			printLine();
 			input = scanner.nextLine();
+			if(input.equals("exit")) {
+				System.out.println(books);
+				return books;
+			}
+				
 			if(Library.books.containsKey(input)) {
 				book = Library.books.get(input);
 			}
 			if(book != null) {
 					System.out.println(book.toString());
 					books.add(book);
-//				if(books.contains)
 			}
 			else
 				System.out.println(centerText("The library does not have a copy of that book."));

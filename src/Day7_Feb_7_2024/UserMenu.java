@@ -12,6 +12,8 @@ public class UserMenu extends Display{
 		String state; 
 		String zip;
 		String phoneNum;
+		String username;
+		String password;
 		scanner.nextLine();
 		printLine();
 		System.out.println(centerText("What is the user's first name?"));
@@ -28,7 +30,9 @@ public class UserMenu extends Display{
 		zip = scanner.nextLine();
 		System.out.println(centerText("What is the user's phone number?"));
 		phoneNum = scanner.nextLine();
-		User user = new User(firstName, lastName, address, city, state, zip, phoneNum);
+		System.out.println(centerText("What is the user's username"));
+		username = scanner.nextLine();
+		User user = new User(firstName, lastName, address, city, state, zip, phoneNum,username);
 		printLine();
 		System.out.println(user.displayUserDetails());
 		return user;
@@ -42,7 +46,7 @@ public class UserMenu extends Display{
 		User user;
 		user = Library.getUser(id);
 		if(user == null) {
-			System.out.println(centerText("That user ID does not exist."));
+			System.out.println(centerText("That user does not exist."));
 		}
 		return user;
 	}

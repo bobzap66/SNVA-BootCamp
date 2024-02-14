@@ -15,10 +15,14 @@ public class User {
 	private String phoneNum;
 	private List<Book> borrowed;
 	private List<Book> returned;
+	private String username;
+	private String password;
+	private boolean isAdmin;
+	private boolean active = true;
 
 	
 	public User(String firstName, String lastName, String address, String city, String state, String zip,
-			String phoneNum) {
+			String phoneNum, String username) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -29,7 +33,9 @@ public class User {
 		this.phoneNum = phoneNum;
 		borrowed = new ArrayList<Book>();
 		returned = new ArrayList<Book>();
+		this.username = username;
 		setId();
+		this.password = this.id;
 	}
 
 	public void setId() {
@@ -39,13 +45,16 @@ public class User {
 
 	@Override
 	public String toString() {
-		String user = lastName + ", " + firstName + "\nID: " + id;
+		String user = lastName + ", " + firstName + "\nID: " + id + "\nUsername: " + username;
 		return user;
 	}
 	
 	public String displayUserDetails() {
 		String user = lastName + ", " + firstName + "\nID: " + id + "\n" + address + "\n" + city + ", " + state + " " + zip +"\nNumber: " + phoneNum;
-		user = user + "\n" + borrowed.toString();
+		if(this.isAdmin()) {
+			user = user + "\n" + this.id + " is an admin.";
+		}
+		user = user + "\n" + displayBorrowed();
 		return user;
 	}
 	
@@ -86,6 +95,95 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+	public List<Book> getBorrowed() {
+		return borrowed;
+	}
+
+	public void setBorrowed(List<Book> borrowed) {
+		this.borrowed = borrowed;
+	}
+
+	public List<Book> getReturned() {
+		return returned;
+	}
+
+	public void setReturned(List<Book> returned) {
+		this.returned = returned;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
 	
 	
 	
