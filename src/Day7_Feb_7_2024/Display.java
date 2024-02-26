@@ -37,7 +37,7 @@ public class Display {
 	
 	}
 	//turns two strings into one line of text as two columns using width for padding
-	public String makeTwoColumns(String s1, String s2) {
+	public static String makeTwoColumns(String s1, String s2) {
 		int padding = width/2;
 		int padding1 = padding - s1.length()-1;
 		int padding2 = padding - s2.length()-2;

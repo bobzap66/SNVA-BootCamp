@@ -27,17 +27,20 @@ public class MenuForAdmin extends Display implements Menu{
 			break;
 		case 3: 
 			System.out.println(centerText("You have selected Suspend User."));
-
+			User user = userMenu.removeUser(scanner);
+			Library.removeUser(user);
 			break;
 		case 4: 
 			System.out.println(centerText("You have selected Add User."));
-			User user = userMenu.addUser(scanner);
+			user = userMenu.addUser(scanner);
 			Library.addUser(user);
 			
 			break;
 		case 5:
 			System.out.println(centerText("You have selected Display Membership Details"));
-//			System.out.println(Library.users.get(user.getId()).displayUserDetails());
+			user = userMenu.displayUserDetails(scanner);
+			System.out.println(centerText(user.displayUserDetails()));
+			user.displayUserDetails();
 			break;
 		case 6:
 			System.out.println(centerText("You have selected Display All Books"));

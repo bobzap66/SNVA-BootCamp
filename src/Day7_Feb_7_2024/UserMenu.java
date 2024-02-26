@@ -13,7 +13,6 @@ public class UserMenu extends Display{
 		String zip;
 		String phoneNum;
 		String username;
-		String password;
 		scanner.nextLine();
 		printLine();
 		System.out.println(centerText("What is the user's first name?"));
@@ -50,5 +49,15 @@ public class UserMenu extends Display{
 		}
 		return user;
 	}
-
+	public User displayUserDetails(Scanner scanner) {
+		scanner.nextLine();
+		System.out.println(centerText("Please enter the user's ID:"));
+		String id = scanner.nextLine();
+		User user;
+		user = Library.getUser(id);
+		if(user == null) {
+			System.out.println(centerText("That user does not exist."));
+		}
+		return user;
+	}
 }

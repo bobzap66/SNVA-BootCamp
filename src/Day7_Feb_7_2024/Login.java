@@ -18,8 +18,13 @@ public class Login{
 		}
 		else {
 			user = Library.users.get(userId);
-			if(validateUser(scanner,user))
+			if(validateUser(scanner,user)) {
+				if(!user.isActive()) {
+					System.out.println("Your account has been suspended.");
+					return null;
+				}
 				return user;
+			}
 			else
 				System.out.println(Display.centerText("Invalid password"));
 		}

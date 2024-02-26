@@ -1,7 +1,5 @@
 package Day7_Feb_7_2024;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu extends Display implements Menu{

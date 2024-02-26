@@ -71,15 +71,24 @@ public class Library {
 	public static void displayUsers() {
 		System.out.println("Library Users");
 		for(Map.Entry<String, User> user : Library.users.entrySet()) {
-			System.out.println(user.toString());
-			System.out.println();
+			if(user.getValue().isActive()) {
+				System.out.println(user.toString());
+				System.out.println();
+			}
+			else {
+				System.out.println("Suspended User: "+ user.toString());
+				System.out.println();
+			}
 		}
 		System.out.println();
 	}
 	
 	public static void displayUserDetails() {
 		System.out.println("Library Users");
-		users.forEach((id, user) -> System.out.println("\n"+user.displayUserDetails())); 
+		for(Map.Entry<String, User> user : Library.users.entrySet()){
+			if(user.getValue().isActive())
+					System.out.println("\n"+user.getValue().toString()); 
+		}
 
 		System.out.println();
 	}
@@ -135,8 +144,8 @@ public class Library {
 	}
 
 	public static void removeUser(User user) {
-			Library.users.remove(user.getId());
-			System.out.println(user.getFirstName() + " " + user.getLastName() + " removed.");
+			Library.users.get(user.getId()).setActive(false);
+			System.out.println(user.getFirstName() + " " + user.getLastName() + " suspended.");
 		
 	}
 	

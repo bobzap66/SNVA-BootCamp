@@ -54,6 +54,8 @@ public class User {
 		if(this.isAdmin()) {
 			user = user + "\n" + this.id + " is an admin.";
 		}
+		if(!this.active)
+			user = user + "\n" + this.id + " is currently inactive.";
 		user = user + "\n" + displayBorrowed();
 		return user;
 	}
